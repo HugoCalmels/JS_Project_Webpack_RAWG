@@ -1,0 +1,10 @@
+:root {
+  --mainBg : moccasin;
+}
+
+$light-text:Peru  ;
+
+body {
+  background-color: var(--mainBg);
+  color: $light-text;
+}

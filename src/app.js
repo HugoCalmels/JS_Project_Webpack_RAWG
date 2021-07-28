@@ -4,7 +4,7 @@ import component from './component';
 import sweat from './images/sweat.jpg'
 
 //styles
-import './styles/style.css';
+import './styles/style.scss';
 
 const img = document.createElement('img');
 img.src = sweat;
