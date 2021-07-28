@@ -1,5 +1,6 @@
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const path = require("path");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
   entry: {
@@ -17,7 +18,8 @@ module.exports = {
   plugins : [
   new HtmlWebpackPlugin({
     title: "Hugo awesome title"
-  })
+  }), 
+  new MiniCssExtractPlugin()
   ],
   module : {
     rules: [
@@ -32,8 +34,8 @@ module.exports = {
         }
       },
       {
-        test: /\.scss$/,
-        use: ['style-loader', 'css-loader', 'sass-loader']
+        test: /\.(s[ac]|c)ss$/i,
+        use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader']
       },
       {
         test: /\.(gif|png|jpg|jpeg|svg)$/i,

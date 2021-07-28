@@ -1,0 +1,2 @@
+:root{--mainBg: Peru}body{background-color:var(--mainBg);color:#ffe4b5}
+p{font-size:28px}
